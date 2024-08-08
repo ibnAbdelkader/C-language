@@ -1,0 +1,25 @@
+// Practice structure declaration and initialization with pointer of characters 
+#include <stdio.h>
+//define structure
+typedef struct{
+     char*  name;
+     int number;
+     float fnum;
+} data;
+
+int main() {
+//declare and initialize an instance
+    data a ={
+        .name = "ahm",
+        .number=3,
+        .fnum=3.5
+    };
+    //printing 
+    printf("%d\n",a.number);
+    printf("%0.2f\n",a.fnum);
+    while(*a.name!='\0'){
+    printf("%c",*a.name);
+    ++a.name; 
+    }
+    return 0;
+}
